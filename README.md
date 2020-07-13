@@ -49,7 +49,12 @@ Postman Integration Tests are in the `tests/` dir. Run them like:
 $ npm run test
 ```
 
+### API Docs
+
+![api-say-so-blog2](https://user-images.githubusercontent.com/214047/84197948-c9fbc180-aa70-11ea-94d0-8cf40ce19b44.png)
+
+![api-say-so-blog](https://user-images.githubusercontent.com/214047/84197947-c9632b00-aa70-11ea-8488-31856c83e7f0.png)
+
 ### Authentication
 
 Requests are authenticated using the `Authorization` header with a valid JWT. There are two Middlewares in `routes/auth.js` that can be used to authenticate requests. The `required` middleware configures the `express-jwt` middleware using our application's secret and will return a 401 status code if the request cannot be authenticated. The payload of the JWT can then be accessed from `req.payload` in the endpoint. The `optional` middleware configures the `express-jwt` in the same way as `required`, but will *not* return a 401 status code if the request cannot be authenticated.
-
